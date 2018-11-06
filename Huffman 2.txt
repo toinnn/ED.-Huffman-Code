@@ -1,0 +1,48 @@
+Algoritimo de Huffman
+
+###Passos###
+1 - Ler arquivo a ser compactado
+	1.1 - Processar o arquivo, caracter por caracter para descobrir seu peso(frequencia com a qual os caracteres aparecem no arquivo)
+	DICA: HashMap em C#??? ex: <a, 3>; <b, 5>...
+
+	1.2 - Ordernar "Hash" pelo peso (cada posicao do hash sera um no da arvore)
+
+2 - Construir arvore binaria
+	2.1 - Juntar os dois primeiros nos, a soma dos pesos dos nos filhos sera o peso do no raiz da nova arvore
+
+	2.2 - O novo no deve ser inserido no Hash mantendo ordenado
+	
+	2.3 - Repetir o processo ate restar apenas uma arvore
+
+3 - Construir tabela de compactacao
+
+	#possivel ideia
+	3.1 - Visitar todos os nos folhas e guardar em um hash a letra correspondente e o binario
+
+	3.2 - Aplicar este hash no texto de entrada para montar a tabela de compactacao
+
+4 - Gravar sequencia binaria no arquivo
+
+	4.1 - Escrever cabecalho do arquivo: A arvore binaria deve estar no arquivo para a descompactacao
+		4.1.1 - Visitar a arvore em pre-ordem escrever cada no visitado, diferenciar nos folhas de nos nao folhas:
+				"Uma maneira de fazer a diferenciacao e escrever um unico bit para cada no, por
+				exemplo 1 para nos folhas e 0 para nos nao-folha. Para nos-folha, e tambem necessario
+				escrever o caracter armazenado. Para nos nao-folha e necessario apenas o bit indicando de
+				que se trata de um no nao-folha."
+
+	4.2 - Escrever sequencia binaria.
+
+	4.3 - Escrever bits de caracter final: "Uma solucao possivel poderia introduzir um pseudo-caracter de final de arquivo, 
+                  introduzido explicitamente pelo programador ao final da sequencia de bits validos. Este caracter tambem
+		  deve entrar na arvore/tabela de codificacao para que seja corretamente descompactado pelo
+		  programa descompactador. Quando um arquivo compactado e escrito, os ultimos bits escritos
+		  devem ser os bits que representam o pseudo-caracter."
+
+5 - Descompactar 
+
+	5.1 - Ler e criar arvore binaria do arquivo.
+
+	5.2 - Ler sequencialmente os bits e varrendo a arvore a procura dos caracteres, a cada novo caracter encontrado,
+		  inserir em uma lista.
+
+	5.3 - Imprimir os caracteres.
