@@ -1,0 +1,16 @@
+
+Leitura e Gravamento de Dados :
+
+https://pt.wikibooks.org/wiki/Programar_em_C%2B%2B/Entrada_e_sa%C3%ADda_de_dados_2
+https://www.youtube.com/watch?v=P-oEh_O0mRk
+
+
+Compressão por Huffman :
+
+https://www.maxwell.vrac.puc-rio.br/9932/9932_5.PDF
+
+
+
+Threads :
+
+https://www.youtube.com/watch?v=gILOMDm1xxk
