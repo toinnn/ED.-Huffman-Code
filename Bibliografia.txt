@@ -10,7 +10,7 @@ http://dcm.ffclrp.usp.br/~augusto/teaching/ici/Arquivos-Binarios-CPP.pdf
 Compressão por Huffman :
 
 https://www.maxwell.vrac.puc-rio.br/9932/9932_5.PDF
-
+https://www.ime.usp.br/~pf/estruturas-de-dados/aulas/huffman.html
 
 
 Threads :
