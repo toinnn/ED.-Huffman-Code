@@ -1,13 +1,13 @@
 # depslib dependency file v1.0
-1541798174 source:c:\users\limaa\onedrive\documentos\github\ed.-huffman-code\huffman.rar\main.cpp
+1541877594 source:c:\users\limaa\onedrive\documentos\github\ed.-huffman-code\huffman.rar\main.cpp
 	<iostream>
 	<fstream>
 	"HashMap.h"
 
-1541803633 source:c:\users\limaa\onedrive\documentos\github\ed.-huffman-code\huffman.rar\src\hashmap.cpp
+1541877469 source:c:\users\limaa\onedrive\documentos\github\ed.-huffman-code\huffman.rar\src\hashmap.cpp
 	"HashMap.h"
 
-1541803670 c:\users\limaa\onedrive\documentos\github\ed.-huffman-code\huffman.rar\include\hashmap.h
+1541885111 c:\users\limaa\onedrive\documentos\github\ed.-huffman-code\huffman.rar\include\hashmap.h
 	"Nos.h"
 
 1541798174 c:\users\limaa\onedrive\documentos\github\ed.-huffman-code\huffman.rar\include\nos.h

@@ -12,7 +12,6 @@ int main()
 {
     ///OBS : NÃO REMOVER O ARQUIVO SALVO DA FICHEIRA DO EXECUTÁVEL , O PATH USADO E DO TIPO RELATIVO
     string dataN;
-    const char *aux1;
     fstream dado("Marunae.data",ios_base::in|ios_base::out|ios_base::binary|ios_base::trunc);
     ifstream data("C:\\Users\\limaa\\OneDrive\\Imagens\\red-eyes-black-charizard-59b472f0d1afc-estampa-301-680x969.jpg",ios_base::binary);
     ofstream buffer("joge.jpg",ios_base::trunc|ios_base::binary);
@@ -33,6 +32,9 @@ int main()
     }
 
 
+
+
+    ///FECHAMENTO DE ARQUIVOS...
     if(dado.is_open())
     {
         dado.close();
@@ -48,6 +50,7 @@ int main()
         buffer.close();
         cout<<"Buffer fechado "<<endl;
     }
+    ///FECHAMENTO DE ARQUIVOS...
     cout << "Hello world!" << endl;
 
 
