@@ -13,6 +13,7 @@ HashMap::HashMap()
 HashMap::~HashMap()
 {
     //dtor
+    limpa();
 }
 
 recebeBool(Hash *aux,bool aux2[8])///GAMBIARRA PRO BOOL FUNCIONAR DIREITO
@@ -24,18 +25,20 @@ recebeBool(Hash *aux,bool aux2[8])///GAMBIARRA PRO BOOL FUNCIONAR DIREITO
 }
 
 
-void HashMap::add(bool aux[8])
+void HashMap::add(string aux)
         {
+
+
             if(raiz->freq==0)///Caso a raiz esteja vazia
             {
-                recebeBool(raiz,aux);///<--Ó A GAMBIARRA SENDO UZADA AKI<--
-                raiz->freq=raiz->freq+1;
+                raiz->Byte=aux;   ///recebeBool(raiz,aux);///<--Ó A GAMBIARRA SENDO UZADA AKI<--
+                raiz->freq=1;
                 tamanho++;
             }else{///Caso a raiz nao esteja vazia
 
             Hash *aux2=raiz,*novo;
             bool tk=1;
-
+            //cout<<"Ta entrando aki "<<endl;
             while(tk)
             {
                 if(aux2->Byte==aux)///Se já existir o Byte analisado
@@ -49,7 +52,7 @@ void HashMap::add(bool aux[8])
                     novo=(Hash*)malloc(sizeof(Hash));
                     novo->ant=aux2;
                     novo->prox=NULL;
-                    recebeBool(novo,aux);///<--Ó A GAMBIARRA SENDO UZADA AKI<--
+                    novo->Byte=aux;   ///recebeBool(novo,aux);///<--Ó A GAMBIARRA SENDO UZADA AKI<--
                     novo->freq=1;
                     aux2->prox=novo;
                     tamanho++;
@@ -68,7 +71,13 @@ void HashMap::add(bool aux[8])
 
 void HashMap::limpa()
 {
-
+    Hash *aux=raiz;
+    while(aux->prox!=NULL)
+    {
+        aux=aux->prox;
+        free(aux->ant);
+    }
+    free(aux);
 }
 
 void HashMap::ordena()

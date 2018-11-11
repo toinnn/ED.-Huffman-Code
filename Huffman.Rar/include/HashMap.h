@@ -3,7 +3,7 @@
 #include "Nos.h"
 
 
-
+///APARENTEMENTE CONSEGUI TRANSFORMAR PARA HASH DE STRING...PERIODO DE OBSERVAÇÃO..
 
 class HashMap
 {   private:
@@ -14,7 +14,7 @@ class HashMap
     public:
         HashMap();
         virtual ~HashMap();
-        void add(bool aux[8]);
+        void add(string aux);
         void limpa();
         void ordena();
 
