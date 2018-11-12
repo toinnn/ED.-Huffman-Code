@@ -15,7 +15,7 @@ HashMap::~HashMap()
     //dtor
     limpa();
 }
-
+/*
 recebeBool(Hash *aux,bool aux2[8])///GAMBIARRA PRO BOOL FUNCIONAR DIREITO
 {
     for(int i=0;i<8;i++)
@@ -23,9 +23,9 @@ recebeBool(Hash *aux,bool aux2[8])///GAMBIARRA PRO BOOL FUNCIONAR DIREITO
         aux->Byte[i]=aux2[i];
     }
 }
+*/
 
-
-void HashMap::add(string aux)
+void HashMap::add(char aux)
         {
 
 
@@ -72,12 +72,19 @@ void HashMap::add(string aux)
 void HashMap::limpa()
 {
     Hash *aux=raiz;
-    while(aux->prox!=NULL)
+    if(aux!=NULL)
     {
-        aux=aux->prox;
-        free(aux->ant);
+        while(aux->prox!=NULL)
+        {
+            aux=aux->prox;
+            free(aux->ant);
+            tamanho--;
+        }
+        free(aux);
+        tamanho--;
+
     }
-    free(aux);
+
 }
 
 void HashMap::ordena()
@@ -92,7 +99,7 @@ void HashMap::ordena()
         while(aux->prox!=NULL)
         {
             aux=aux->prox;
-            if(aux2->freq<aux->freq)
+            if(aux2->freq>aux->freq)
             {
                 aux2=aux;
             }
@@ -133,5 +140,35 @@ void HashMap::ordena()
 
     }
     raiz=novaRaiz;
+}
+
+void HashMap::apresFreq()
+{
+    Hash *aux=raiz;
+    int i=0,j=0;
+    while(aux->prox!=NULL)
+    {
+        j=aux->Byte - '0';
+        cout<<aux->freq<<" do charactere :"<<j <<endl;
+        i+=aux->freq;
+        aux=aux->prox;
+    }
+    j=aux->Byte - '0';
+    i+=aux->freq;
+    cout<<aux->freq<<" do charactere :"<<j <<endl;
+    cout<<"O total de itens e de "<<i<<endl;
+
+}
+
+void HashMap::escrever()
+{
+    Hash *aux=raiz;
+
+    while(aux->prox!=NULL)
+    {
+        cout<<aux->Byte;
+        aux=aux->prox;
+    }
+    cout<<aux->Byte;
 }
 

@@ -1,17 +1,23 @@
 # depslib dependency file v1.0
-1541939158 source:c:\users\limaa\onedrive\documentos\github\ed.-huffman-code\huffman.rar\main.cpp
+1541980757 source:c:\users\limaa\onedrive\documentos\github\ed.-huffman-code\huffman.rar\main.cpp
 	<iostream>
 	<fstream>
 	"HashMap.h"
 	<string>
 
-1541938541 source:c:\users\limaa\onedrive\documentos\github\ed.-huffman-code\huffman.rar\src\hashmap.cpp
+1542047479 source:c:\users\limaa\onedrive\documentos\github\ed.-huffman-code\huffman.rar\src\hashmap.cpp
 	"HashMap.h"
 
-1541936931 c:\users\limaa\onedrive\documentos\github\ed.-huffman-code\huffman.rar\include\hashmap.h
+1542048186 c:\users\limaa\onedrive\documentos\github\ed.-huffman-code\huffman.rar\include\hashmap.h
 	"Nos.h"
 
-1541938190 c:\users\limaa\onedrive\documentos\github\ed.-huffman-code\huffman.rar\include\nos.h
+1542041760 c:\users\limaa\onedrive\documentos\github\ed.-huffman-code\huffman.rar\include\nos.h
 	<malloc.h>
 	<iostream>
+
+1542048078 source:c:\users\limaa\onedrive\documentos\github\ed.-huffman-code\huffman.rar\src\huffmantree.cpp
+	"HuffmanTree.h"
+
+1542047480 c:\users\limaa\onedrive\documentos\github\ed.-huffman-code\huffman.rar\include\huffmantree.h
+	"HashMap.h"
 

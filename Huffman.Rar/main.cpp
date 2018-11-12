@@ -41,7 +41,14 @@ int main()
         //cout<<"A linha anterior tem "<<dataN.size()<<" caracteres "<<endl;
         //tes2+=dataN;
 
-        int i;
+
+
+        for(int i=0 ;i<dataN.size();i++)
+        {
+            test1+=dataN.at(i);
+            HashInicial.add(dataN.at(i));
+        }
+        /*int i;
         for(i=0;i+7<dataN.size();i=i+8 )/// acho que ta certo , não TOU mais ESTRANHANDO O PRINT DAS FATIAS...
             {
 
@@ -57,18 +64,23 @@ int main()
             StrAux=Fatia(dataN,i,dataN.size()-1);
             HashInicial.add(StrAux);
 
-        }
+        }*/
 
         buffer<<test1<<endl;
         cout<<test1<<endl;
         test1="";
 
     }
-    cout<<"Ordenando..."<<endl;
+    cout<<"Ordenando...\n\n\n\n\n\n\n\n\n\n"<<endl;
     HashInicial.ordena();
-    cout<<"Limpando..."<<endl;
+    cout<<"As frequencias sao :"<<endl;
+    HashInicial.apresFreq();
+    cout<<HashInicial.size()<<endl;
+    //cout<<sizeof()
+    //HashInicial.escrever();
+    //cout<<"Limpando..."<<endl;
     HashInicial.limpa();
-
+    cout<<HashInicial.size()<<endl;
 
     ///vFECHAMENTO DE ARQUIVOS...v
     if(dado.is_open())

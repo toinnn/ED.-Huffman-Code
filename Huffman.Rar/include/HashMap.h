@@ -14,11 +14,23 @@ class HashMap
     public:
         HashMap();
         virtual ~HashMap();
-        void add(string aux);
+        void add(char aux);
         void limpa();
         void ordena();
+        void apresFreq();
+        int  size()
+        {
+            return tamanho;
+        }
+        void escrever();
+        Hash* getRaiz()
+        {
+            return raiz;
+        }
+
 
     protected:
+
 
 
 };

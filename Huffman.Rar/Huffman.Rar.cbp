@@ -35,9 +35,11 @@
 			<Add option="-fexceptions" />
 		</Compiler>
 		<Unit filename="include/HashMap.h" />
+		<Unit filename="include/HuffmanTree.h" />
 		<Unit filename="include/Nos.h" />
 		<Unit filename="main.cpp" />
 		<Unit filename="src/HashMap.cpp" />
+		<Unit filename="src/HuffmanTree.cpp" />
 		<Extensions>
 			<code_completion />
 			<envvars />
