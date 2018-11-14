@@ -13,6 +13,7 @@ class HashMap
 
     public:
         HashMap();
+        HashMap(int i);
         virtual ~HashMap();
         void add(char aux);
         void limpa();
@@ -27,6 +28,9 @@ class HashMap
         {
             return raiz;
         }
+        void addAux(HashMap Lista);
+        void auxAct();
+
 
 
     protected:

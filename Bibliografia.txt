@@ -1,5 +1,5 @@
 
-Leitura e Gravamento de Dados :
+	Leitura e Gravamento de Dados :
 
 https://pt.wikibooks.org/wiki/Programar_em_C%2B%2B/Entrada_e_sa%C3%ADda_de_dados_2
 https://www.youtube.com/watch?v=P-oEh_O0mRk
@@ -7,17 +7,29 @@ https://www.youtube.com/watch?v=P-oEh_O0mRk
 http://dcm.ffclrp.usp.br/~augusto/teaching/ici/Arquivos-Texto-CPP.pdf
 http://dcm.ffclrp.usp.br/~augusto/teaching/ici/Arquivos-Binarios-CPP.pdf
 
-Compressão por Huffman :
+	Compressão por Huffman :
 
 https://www.maxwell.vrac.puc-rio.br/9932/9932_5.PDF
 https://www.ime.usp.br/~pf/estruturas-de-dados/aulas/huffman.html
 
 
-Manuseio de Dados :
+	Manuseio de Dados :
 
 https://forum.imasters.com.br/topic/242708-inteiro-para-char/
+	HeapSort :
+https://www.ime.usp.br/~pf/algoritmos/aulas/hpsrt.html
 
 
-Threads :
+	Threads :
 
 https://www.youtube.com/watch?v=gILOMDm1xxk
+
+	Json  :
+
+https://www.json.org/json-pt.html
+
+	BIT FIELD :
+
+https://www.tutorialspoint.com/cprogramming/c_bit_fields.htm
+https://www.geeksforgeeks.org/bit-fields-c/
+https://docs.microsoft.com/pt-br/cpp/c-language/c-bit-fields?view=vs-2017

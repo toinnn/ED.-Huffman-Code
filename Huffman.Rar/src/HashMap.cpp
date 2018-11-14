@@ -10,6 +10,11 @@ HashMap::HashMap()
     tamanho=0;
 }
 
+HashMap::HashMap(int i)
+{
+    cout<<"Nao fasso nada "<<endl;
+}
+
 HashMap::~HashMap()
 {
     //dtor
@@ -69,7 +74,7 @@ void HashMap::add(char aux)
             }
         }
 
-void HashMap::limpa()
+void HashMap::limpa()///Vai ter que ser auterado com a lógica de if(aux->prox->ant==aux)
 {
     Hash *aux=raiz;
     if(aux!=NULL)
@@ -82,6 +87,7 @@ void HashMap::limpa()
         }
         free(aux);
         tamanho--;
+        raiz=NULL;
 
     }
 
@@ -171,4 +177,52 @@ void HashMap::escrever()
     }
     cout<<aux->Byte;
 }
+
+void HashMap::addAux(HashMap Lista)///AUX PARA CONSTRUÇÃO DE UMA ARVORE BINARIA,Adicionar Lista ja ordenada
+{
+    limpa();
+    int nHash=sizeof(Hash);
+    raiz=(Hash*)malloc(nHash);
+    raiz->ant=Lista.getRaiz();
+    raiz->freq=raiz->ant->freq;
+
+    Hash *novo,*aux=raiz,*auxL=Lista.getRaiz();
+
+    for(int i=0;i<Lista.size()-1;i++)
+    {
+        aux->prox=(Hash*)malloc(nHash);
+        aux->prox->ant=auxL->prox;
+        aux->prox->freq=auxL->freq;
+        aux=aux->prox;
+        auxL=auxL->prox;
+    }
+    aux->prox=NULL;
+
+}
+
+void HashMap::auxAct()///AINDA EM CONSTRUÇÃO...
+{
+    Hash *B=raiz->prox,*aux=raiz;
+    bool tk=1;
+    raiz->freq+=raiz->prox->freq;
+
+    while(tk)///Reorganizando para a nova frequência..
+    {
+        if(aux->prox==NULL)
+        {
+            tk=0;
+        }else if(raiz->freq>aux->prox->freq)
+        {
+            aux=aux->prox;
+        }else
+        {
+            tk=0;
+        }
+    }
+    raiz->prox=aux->prox;
+    aux->prox=raiz;
+    raiz=B->prox;
+
+}
+
 
