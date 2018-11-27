@@ -7,10 +7,11 @@
 
 class HashMap
 {   private:
+
+
+    protected:
     Hash *raiz;
     int tamanho;
-
-
     public:
         HashMap();
         HashMap(int i);
@@ -29,11 +30,14 @@ class HashMap
             return raiz;
         }
         void addAux(HashMap Lista);
-        void auxAct();
+        Hash auxAct(Hash *raiz);
+        void setRaiz(Hash *novo)
+        {
+            raiz=novo;
+        }
 
 
 
-    protected:
 
 
 

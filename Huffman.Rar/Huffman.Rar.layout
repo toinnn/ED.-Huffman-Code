@@ -2,18 +2,23 @@
 <CodeBlocks_layout_file>
 	<FileVersion major="1" minor="0" />
 	<ActiveTarget name="Debug" />
-	<File name="include\HashMap.h" open="1" top="0" tabpos="2" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="include\HashMap.h" open="1" top="1" tabpos="2" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="271" topLine="9" />
+			<Cursor1 position="198" topLine="9" />
 		</Cursor>
 		<Folding>
-			<Collapse line="22" />
-			<Collapse line="27" />
+			<Collapse line="23" />
+			<Collapse line="28" />
 		</Folding>
 	</File>
 	<File name="include\HuffmanTree.h" open="1" top="0" tabpos="5" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="185" topLine="1" />
+			<Cursor1 position="228" topLine="1" />
+		</Cursor>
+	</File>
+	<File name="main.cpp" open="1" top="0" tabpos="1" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="2372" topLine="5" />
 		</Cursor>
 	</File>
 	<File name="include\Nos.h" open="1" top="0" tabpos="4" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
@@ -21,31 +26,30 @@
 			<Cursor1 position="225" topLine="0" />
 		</Cursor>
 	</File>
-	<File name="src\HashMap.cpp" open="1" top="1" tabpos="3" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="src\HashMap.cpp" open="1" top="0" tabpos="3" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="4607" topLine="22" />
+			<Cursor1 position="1945" topLine="22" />
 		</Cursor>
 		<Folding>
 			<Collapse line="3" />
 			<Collapse line="13" />
 			<Collapse line="18" />
 			<Collapse line="33" />
-			<Collapse line="77" />
-			<Collapse line="96" />
-			<Collapse line="151" />
-			<Collapse line="169" />
-			<Collapse line="181" />
-			<Collapse line="203" />
+			<Collapse line="101" />
+			<Collapse line="156" />
+			<Collapse line="174" />
+			<Collapse line="186" />
+			<Collapse line="208" />
 		</Folding>
-	</File>
-	<File name="main.cpp" open="1" top="0" tabpos="1" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="2372" topLine="8" />
-		</Cursor>
 	</File>
 	<File name="src\HuffmanTree.cpp" open="1" top="0" tabpos="6" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="318" topLine="0" />
+			<Cursor1 position="1150" topLine="33" />
 		</Cursor>
+		<Folding>
+			<Collapse line="3" />
+			<Collapse line="9" />
+			<Collapse line="20" />
+		</Folding>
 	</File>
 </CodeBlocks_layout_file>

@@ -13,3 +13,11 @@ struct Hash
  {
 
  }*/
+struct HashSimb
+{
+    char Byte ;
+    string cod;
+    HashSimb *ant,*prox;
+};
+
+

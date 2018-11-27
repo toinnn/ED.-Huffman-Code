@@ -79,6 +79,11 @@ void HashMap::limpa()///Vai ter que ser auterado com a lógica de if(aux->prox->a
     Hash *aux=raiz;
     if(aux!=NULL)
     {
+        if(aux->prox!=NULL &&aux->ant!=NULL)
+        {
+
+        }
+
         while(aux->prox!=NULL)
         {
             aux=aux->prox;
@@ -179,7 +184,7 @@ void HashMap::escrever()
 }
 
 void HashMap::addAux(HashMap Lista)///AUX PARA CONSTRUÇÃO DE UMA ARVORE BINARIA,Adicionar Lista ja ordenada
-{
+{   ///Ps: Não está otimizado para receber possíveis entradas nulas
     limpa();
     int nHash=sizeof(Hash);
     raiz=(Hash*)malloc(nHash);
@@ -192,7 +197,7 @@ void HashMap::addAux(HashMap Lista)///AUX PARA CONSTRUÇÃO DE UMA ARVORE BINARIA,
     {
         aux->prox=(Hash*)malloc(nHash);
         aux->prox->ant=auxL->prox;
-        aux->prox->freq=auxL->freq;
+        aux->prox->freq=auxL->prox->freq;
         aux=aux->prox;
         auxL=auxL->prox;
     }
@@ -200,9 +205,9 @@ void HashMap::addAux(HashMap Lista)///AUX PARA CONSTRUÇÃO DE UMA ARVORE BINARIA,
 
 }
 
-void HashMap::auxAct()///AINDA EM CONSTRUÇÃO...
+Hash HashMap::auxAct(Hash *novo)///AINDA EM CONSTRUÇÃO...
 {
-    Hash *B=raiz->prox,*aux=raiz;
+    Hash *B=raiz->prox,*aux=raiz,retorno;
     bool tk=1;
     raiz->freq+=raiz->prox->freq;
 
@@ -219,10 +224,19 @@ void HashMap::auxAct()///AINDA EM CONSTRUÇÃO...
             tk=0;
         }
     }
+
+
+
     raiz->prox=aux->prox;
     aux->prox=raiz;
-    raiz=B->prox;
+    raiz->ant=novo;
+    retorno.ant=aux;
+    retorno.prox=aux->prox->prox;
 
+    raiz=B->prox;
+    ///free(B); NAO SEI AINDA OQ FAZER..
+
+    return retorno;
 }
 
 

@@ -7,6 +7,13 @@ https://www.youtube.com/watch?v=P-oEh_O0mRk
 http://dcm.ffclrp.usp.br/~augusto/teaching/ici/Arquivos-Texto-CPP.pdf
 http://dcm.ffclrp.usp.br/~augusto/teaching/ici/Arquivos-Binarios-CPP.pdf
 
+	Open File Dialog :
+https://www.youtube.com/watch?v=-iMGhSlvIR0
+https://docs.microsoft.com/pt-br/windows/desktop/api/commdlg/nf-commdlg-getopenfilenamea
+
+	AGORA É COMMONFILEDIALOG !!! :
+https://docs.microsoft.com/pt-br/dotnet/framework/winforms/controls/how-to-open-files-using-the-openfiledialog-component
+
 	Compressão por Huffman :
 
 https://www.maxwell.vrac.puc-rio.br/9932/9932_5.PDF
