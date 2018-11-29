@@ -73,26 +73,48 @@ void HashMap::add(char aux)
 
             }
         }
+void HashMap::limpa(Hash *aux)
+{
+    if(aux->ant!=NULL)
+    {
+        limpa(aux->ant);
+    }
+    if(aux->prox!=NULL)
+    {
+        limpa(aux->prox);
+    }
+    if(aux->ant==NULL && aux->prox==NULL)
+    {
+        free(aux);
+    }
 
-void HashMap::limpa()///Vai ter que ser auterado com a lógica de if(aux->prox->ant==aux)
+}
+void HashMap::limpa()///Vai ter que ser auterado com a lógica de if(aux->prox->ant==aux)...Ja foi alterado
 {
     Hash *aux=raiz;
     if(aux!=NULL)
     {
-        if(aux->prox!=NULL &&aux->ant!=NULL)
+        if(aux->prox==NULL)
         {
-
-        }
-
-        while(aux->prox!=NULL)
+            free(raiz);
+        }else
         {
-            aux=aux->prox;
-            free(aux->ant);
+            if(aux->prox->ant!=aux)
+            {
+                limpa(raiz);
+            }
+
+            while(aux->prox!=NULL)
+            {
+                aux=aux->prox;
+                free(aux->ant);
+                tamanho--;
+            }
+            free(aux);
             tamanho--;
+            raiz=NULL;
         }
-        free(aux);
-        tamanho--;
-        raiz=NULL;
+
 
     }
 

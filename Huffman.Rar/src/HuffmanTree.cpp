@@ -12,7 +12,7 @@ HuffmanTree::~HuffmanTree()
     //dtor
 }
 
-void HuffmanTree::add(HashMap Lista)
+void HuffmanTree::add(HashMap Lista)///Pega a Hash e transforma da Arvore de Huffman
 {
     Hash *novo,pos,*auxLimp=Lista.getRaiz();
     HashMap aux;
@@ -62,7 +62,7 @@ void HuffmanTree::add(HashMap Lista)
 }
 
 
-void HuffmanTree:: TabSimb(Hash *aux,string cod)
+void HuffmanTree:: TabSimb(Hash *aux,string cod)///Montando a Tabela de Simbolo
 {
     if(aux->ant!=NULL)
     {

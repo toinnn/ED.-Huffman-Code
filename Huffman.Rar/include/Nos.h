@@ -21,3 +21,12 @@ struct HashSimb
 };
 
 
+
+
+/*struct Byte
+{
+    unsigned int bit :8;
+};
+*/
+
+

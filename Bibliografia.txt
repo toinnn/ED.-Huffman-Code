@@ -10,9 +10,10 @@ http://dcm.ffclrp.usp.br/~augusto/teaching/ici/Arquivos-Binarios-CPP.pdf
 	Open File Dialog :
 https://www.youtube.com/watch?v=-iMGhSlvIR0
 https://docs.microsoft.com/pt-br/windows/desktop/api/commdlg/nf-commdlg-getopenfilenamea
+https://docs.microsoft.com/pt-br/dotnet/framework/winforms/controls/how-to-open-files-using-the-openfiledialog-component
 
 	AGORA É COMMONFILEDIALOG !!! :
-https://docs.microsoft.com/pt-br/dotnet/framework/winforms/controls/how-to-open-files-using-the-openfiledialog-component
+https://msdn.microsoft.com/en-us/library/windows/desktop/bb776913(v=vs.85).aspx#usage
 
 	Compressão por Huffman :
 
@@ -23,6 +24,10 @@ https://www.ime.usp.br/~pf/estruturas-de-dados/aulas/huffman.html
 	Manuseio de Dados :
 
 https://forum.imasters.com.br/topic/242708-inteiro-para-char/
+https://stackoverflow.com/questions/17129365/how-do-i-create-a-bitset-from-binary-string
+https://stackoverflow.com/questions/347949/how-to-convert-a-stdstring-to-const-char-or-char
+https://stackoverflow.com/questions/11068204/is-it-possible-to-convert-bitset8-to-char-in-c
+
 	HeapSort :
 https://www.ime.usp.br/~pf/algoritmos/aulas/hpsrt.html
 
@@ -30,6 +35,7 @@ https://www.ime.usp.br/~pf/algoritmos/aulas/hpsrt.html
 	Threads :
 
 https://www.youtube.com/watch?v=gILOMDm1xxk
+https://msdn.microsoft.com/pt-br/library/c9ceah3b.aspx
 
 	Json  :
 
@@ -40,3 +46,10 @@ https://www.json.org/json-pt.html
 https://www.tutorialspoint.com/cprogramming/c_bit_fields.htm
 https://www.geeksforgeeks.org/bit-fields-c/
 https://docs.microsoft.com/pt-br/cpp/c-language/c-bit-fields?view=vs-2017
+
+	BITSet :
+
+https://www.tutorialspoint.com/cpp_standard_library/bitset.htm
+https://www.youtube.com/watch?v=TNC6EojsHCI
+https://owlcation.com/stem/C-bitset-with-example
+http://www.cplusplus.com/reference/bitset/bitset/bitset/

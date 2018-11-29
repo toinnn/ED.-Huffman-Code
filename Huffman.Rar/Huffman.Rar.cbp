@@ -34,10 +34,12 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
+		<Unit filename="include/Compressor.h" />
 		<Unit filename="include/HashMap.h" />
 		<Unit filename="include/HuffmanTree.h" />
 		<Unit filename="include/Nos.h" />
 		<Unit filename="main.cpp" />
+		<Unit filename="src/Compressor.cpp" />
 		<Unit filename="src/HashMap.cpp" />
 		<Unit filename="src/HuffmanTree.cpp" />
 		<Extensions>
