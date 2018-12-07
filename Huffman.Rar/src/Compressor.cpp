@@ -37,7 +37,7 @@ void Compressor::comprimir(string path)
     ///Classes mais básicas :
     string novoNome="Onibus.Comprimido";///Do arquivo ;
     string data,codAux,buffer,nvLinha ;///Dados de cada linha dos binares
-    int j,OverFlou,oucupado;
+    //int j,OverFlou,oucupado;
     ///Classes mais complexas :
     //bitset<16> Byte ;///O sentido Crescente do bitset é o inverso do da string,Isso possui 16 bits por conta do C++ trabalhar
     HashMap HashFreq ;
@@ -56,11 +56,20 @@ void Compressor::comprimir(string path)
         }
     }
     HashFreq.ordena();///O adicionar esta com defeito
+    cout<<"Pre add"<<endl;
     Groot.add(HashFreq);///Monta a arvore a partir do Hash Organizado
+    cout<<"Pre dicionario "<<endl;
+
     Dicionario=Groot.TabSimb();///Extrai uma tabela de simbolos
     cout<<"Passo do dicionario"<<endl;
+
+    ///jeito preguiçoso :
+    Original.close();
+    Original.open(path.c_str(),ios_base::binary);
+
     while(getline(Original,data))///RE-escreve os binarios Diacordo com a Tabela de Simbolos
-    {   nvLinha="";
+    {   cout<<"Entro no while "<<endl;
+        nvLinha="";
         for(int i=0;i<data.size();i++)
         {
             //codAux=CharToCod(data.at(i),Dicionario);
@@ -79,8 +88,14 @@ void Compressor::comprimir(string path)
                 delete &Byte ;
             }
         }
+        cout<<"Chegou no chegador "<<endl;
+        bitset<16> Byte(buffer);
+        nvLinha.push_back(Byte.to_ulong());
         NovoArquivo<<nvLinha<<endl;
+        cout<<"Passou do passador"<<endl;
+        delete &Byte ;
     }
+
 }
 
 

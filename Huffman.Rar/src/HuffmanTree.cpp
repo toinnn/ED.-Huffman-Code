@@ -18,63 +18,64 @@ void HuffmanTree::add(HashMap Lista)///Pega a Hash e transforma da Arvore de Huf
     HashMap aux;
 
     aux.addAux(Lista);
+
     while(auxLimp->prox!=NULL)
     {
         auxLimp=auxLimp->prox;
         auxLimp->ant->prox=NULL;
         auxLimp->ant=NULL;
+        //cout<<auxLimp->Byte<<"Quebrado"<<endl;
     }
 
 
     for(int i=0;i<Lista.size()-1;i++)
     {
         novo=(Hash*)malloc(sizeof(Hash));
+
         novo->ant=aux.getRaiz()->ant;
         novo->prox=aux.getRaiz()->prox->ant;
         //novo->ant=Lista.getRaiz();
         //novo->prox=Lista.getRaiz()->prox;
         novo->freq=novo->ant->freq + novo->prox->freq;
         ///Montado o "AB" atual ^
-        pos=aux.auxAct(novo);
-        /*pos->ant->ant->prox=novo;
-        pos->prox->ant->ant=novo;
-        */
-
-
-
-
-
-
+        aux.auxAct(novo);
+//        pos->ant->ant->prox=novo;
+//        pos->prox->ant->ant=novo;
 
 
         //pos->prox->ant->ant->prox=novo;
         //pos->prox->ant->ant=novo;
         /*if((Lista.size()-i)>2)
         {
-            raiz=raiz->prox->prox;  ///ISSO TA CLARAMENTE ERRADO /Ja na tao claramente !!!!!!!!!
+            raiz=raiz->prox->prox;  ///ISSO TA CLARAMENTE ERRADO /Ja na tao claramente/claramente !!!!!!!!!
         }*/
+        //cout<<"Esquerda :"<<novo->ant->Byte<<"Direita : "<<novo->prox->Byte<<endl;
 
     }
-        Lista.setRaiz(novo);
+        //Lista.setRaiz(novo);
         raiz=novo;
         cout<<"Arvore Montada "<<endl;
 
 }
 
-
 void HuffmanTree:: TabSimb(Hash *aux,string cod)///Montando a Tabela de Simbolo
 {
+    cout<<"Entro no Tab Simb "<<endl;
     if(aux->ant!=NULL)
     {
+        cout<<"Tento entrar na esquerda "<<endl;
         TabSimb(aux->ant,cod+"0");
     }
     if(aux->prox!=NULL)
     {
+        cout<<"Tento entrar na direita"<<endl;
         TabSimb(aux->prox,cod+"1");
     }
     if(aux->ant==NULL && aux->prox==NULL)
     {
+        //cout<<"Crasho aki "<<endl;
         addSimb(aux,cod);
+        cout<<"Simbolo adicionado com sucesso "<<endl;
     }
 
 
@@ -83,8 +84,10 @@ void HuffmanTree:: TabSimb(Hash *aux,string cod)///Montando a Tabela de Simbolo
 
 void HuffmanTree:: addSimb(Hash *aux,string cod)
 {
+    cout<<"Entro no addSimb "<<endl;
     if(TabSimbol!=NULL)
     {
+
         HashSimb *ask=TabSimbol;
 
         while(ask->prox!=NULL)
@@ -92,8 +95,9 @@ void HuffmanTree:: addSimb(Hash *aux,string cod)
             ask=ask->prox;
         }
         ask->prox=(HashSimb*)malloc(sizeof(HashSimb));
-        ask->prox->ant=ask;
+        //ask->prox->ant=ask;
         ask=ask->prox;
+        cout<<"Chego aki no addSimb"<<endl;
         ask->prox=NULL;
         ask->Byte=aux->Byte;
         ask->cod=cod;
@@ -104,6 +108,7 @@ void HuffmanTree:: addSimb(Hash *aux,string cod)
         TabSimbol->prox=NULL;
         TabSimbol->Byte=aux->Byte;
         TabSimbol->cod=cod;
+        cout<<"Salvo o primeiro valor no TabSimbol "<<endl;
     }
 
 

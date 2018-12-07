@@ -28,7 +28,8 @@ void abre (string path )
 int main()
 {
     ///OBS : NÃO REMOVER O ARQUIVO SALVO DA FICHEIRA DO EXECUTÁVEL , O PATH USADO E DO TIPO RELATIVO
-    /*string dataN,StrAux,test1,tes2;
+    /*
+    string dataN,StrAux,test1,tes2;
     HashMap HashInicial ;
 
     fstream dado("Marunae.data",ios_base::in|ios_base::out|ios_base::binary|ios_base::trunc);
@@ -108,11 +109,13 @@ int main()
     ///^FECHAMENTO DE ARQUIVOS...^
     cout << "Hello world!" << endl;
 
-    */
 
+
+    /**/
     Compressor WinRar ;
 
     WinRar.comprimir("C:\\Users\\limaa\\OneDrive\\Imagens\\red-eyes-black-charizard-59b472f0d1afc-estampa-301-680x969.jpg");
     cout<<"Chego aki"<<endl;
+
     return 0;
 }

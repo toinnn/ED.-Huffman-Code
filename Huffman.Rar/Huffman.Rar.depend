@@ -1,12 +1,12 @@
 # depslib dependency file v1.0
-1543529740 source:c:\users\limaa\onedrive\documentos\github\ed.-huffman-code\huffman.rar\main.cpp
+1544143953 source:c:\users\limaa\onedrive\documentos\github\ed.-huffman-code\huffman.rar\main.cpp
 	<iostream>
 	<fstream>
 	"HashMap.h"
 	<string>
 	"Compressor.h"
 
-1543524078 source:c:\users\limaa\onedrive\documentos\github\ed.-huffman-code\huffman.rar\src\hashmap.cpp
+1544144566 source:c:\users\limaa\onedrive\documentos\github\ed.-huffman-code\huffman.rar\src\hashmap.cpp
 	"HashMap.h"
 
 1543524078 c:\users\limaa\onedrive\documentos\github\ed.-huffman-code\huffman.rar\include\hashmap.h
@@ -16,10 +16,10 @@
 	<malloc.h>
 	<iostream>
 
-1543428603 source:c:\users\limaa\onedrive\documentos\github\ed.-huffman-code\huffman.rar\src\huffmantree.cpp
+1544148631 source:c:\users\limaa\onedrive\documentos\github\ed.-huffman-code\huffman.rar\src\huffmantree.cpp
 	"HuffmanTree.h"
 
-1543428603 c:\users\limaa\onedrive\documentos\github\ed.-huffman-code\huffman.rar\include\huffmantree.h
+1543626778 c:\users\limaa\onedrive\documentos\github\ed.-huffman-code\huffman.rar\include\huffmantree.h
 	"HashMap.h"
 
 1543529262 c:\users\limaa\onedrive\documentos\github\ed.-huffman-code\huffman.rar\include\compressor.h
@@ -29,6 +29,6 @@
 	<bitset>
 	"HashMap.h"
 
-1543530071 source:c:\users\limaa\onedrive\documentos\github\ed.-huffman-code\huffman.rar\src\compressor.cpp
+1544148735 source:c:\users\limaa\onedrive\documentos\github\ed.-huffman-code\huffman.rar\src\compressor.cpp
 	"Compressor.h"
 
