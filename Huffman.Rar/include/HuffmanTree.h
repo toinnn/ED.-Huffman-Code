@@ -43,7 +43,7 @@ class HuffmanTree:public HashMap
         void addSimb(Hash *aux,string cod );///Adiciona um Hash e associa um codigo a ele
         int altura()
         {
-            return altura(raiz);
+            return altura(getRaiz());
         }
 
     protected:

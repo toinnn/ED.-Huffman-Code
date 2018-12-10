@@ -72,6 +72,7 @@ void Compressor::comprimir(string path)
         nvLinha="";
         for(int i=0;i<data.size();i++)
         {
+            cout<<"Passo do for"<<endl;
             //codAux=CharToCod(data.at(i),Dicionario);
             //j=codAux.size();
             //OverFlou=8-j;

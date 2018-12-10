@@ -8,10 +8,13 @@
 class HashMap
 {   private:
     void limpa(Hash *aux);
-
-    protected:
     Hash *raiz;
     int tamanho;
+
+    protected:
+
+
+
     public:
         HashMap();
         HashMap(int i);
@@ -31,7 +34,7 @@ class HashMap
         }
         ///Métodos de uso da Huffman Tree :
         void addAux(HashMap Lista);
-        Hash auxAct(Hash *raiz);
+        void auxAct(Hash *novo);
         void setRaiz(Hash *novo)
         {
             raiz=novo;
