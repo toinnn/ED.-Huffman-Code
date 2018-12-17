@@ -37,7 +37,7 @@ class HuffmanTree:public HashMap
 
     public:
         HuffmanTree();
-        void add(HashMap Lista);///Pega o Hash Ordenado e Monta a arvore De Huffman
+        void addT(HashMap Lista);///Pega o Hash Ordenado e Monta a arvore De Huffman
         virtual ~HuffmanTree();
         HashSimb* TabSimb();///Extrai a tabela de Simbolos da Arvore e associa a Variável TabSimbol
         void addSimb(Hash *aux,string cod );///Adiciona um Hash e associa um codigo a ele

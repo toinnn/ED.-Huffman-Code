@@ -115,8 +115,39 @@ int main()
     /**/
     Compressor WinRar ;
 
-    WinRar.comprimir("C:\\Users\\limaa\\OneDrive\\Imagens\\red-eyes-black-charizard-59b472f0d1afc-estampa-301-680x969.jpg");
+    //WinRar.comprimir("C:\\Users\\limaa\\OneDrive\\Imagens\\red-eyes-black-charizard-59b472f0d1afc-estampa-301-680x969.jpg");
+    string path ;
+    char r ;
+    bool tk=1;
+
+    while(tk)
+    {
+        cout<<"\nDigite :\n c-Para comprimir\n d-Para decompactar um arquivo.comprimido\n s-Para sair"<<endl;
+        cin>>r;
+        if(r=='c'||r=='C')
+        {
+            cout<<"\nDigite o path completo com o nome do arquivo que deseja comprimir "<<endl;
+            cout<<"\nPor exemplo : C:\\Users\\limaa\\OneDrive\\Imagens\\red-eyes-black-charizard-59b472f0d1afc-estampa-301-680x969.jpg "<<endl;
+            cin>>path;
+            WinRar.comprimir(path);
+
+
+        }else if (r=='s'||r=='S')
+        {
+            tk=0;
+        }else if(r=='d'||r=='D')
+        {
+            cout<<"\nDigite o path completo com o nome do arquivo que deseja decompactar "<<endl;
+            cout<<"\nPor exemplo : C:\\Users\\limaa\\OneDrive\\Imagens\\red-eyes-black-charizard-59b472f0d1afc-estampa-301-680x969.jpg "<<endl;
+            cin>>path;
+            cout<<"\nDigite o path completo com o nome do arquivo dicionario .dicionario  para iniciar a descompressao"<<endl;
+        }
+    }
+
+    //WinRar.comprimir(0);
+
     cout<<"Chego aki"<<endl;
+
 
     return 0;
 }

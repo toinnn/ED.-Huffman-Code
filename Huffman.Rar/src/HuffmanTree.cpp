@@ -12,7 +12,7 @@ HuffmanTree::~HuffmanTree()
     //dtor
 }
 
-void HuffmanTree::add(HashMap Lista)///Pega a Hash e transforma da Arvore de Huffman
+void HuffmanTree::addT(HashMap Lista)///Pega a Hash e transforma da Arvore de Huffman
 {
     Hash *novo,*auxLimp=Lista.getRaiz();
     HashMap aux;

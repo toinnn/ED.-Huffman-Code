@@ -31,11 +31,37 @@ string Compressor::Fatia(string linha,int i ,int j)
     return aux;
 }
 
+int Compressor::comprimir(int k)
+{
+    string Linha ;
+
+    HashMap ListFreq ;
+    HuffmanTree Arvore ;
+    HashSimb *ListaSimbolos ;
+
+    ifstream abertura("red-eyes-black-charizard-59b472f0d1afc-estampa-301-680x969.jpg",ios_base::binary);
+    ofstream Memoria("Salvado.Salvo",ios_base::binary);
+
+    while(getline(abertura,Linha))
+    {
+        for(int i =0;i<Linha.size();i++)
+        {
+            ListFreq.add(Linha.at(i));
+            cout<<"Adicionado o char "<<Linha.at(i)<<endl;
+        }
+    }
+
+    ListFreq.ordena();
+    //Arvore.add(ListFreq);
+
+
+    return 0;
+}
 
 void Compressor::comprimir(string path)
 {
     ///Classes mais básicas :
-    string novoNome="Onibus.Comprimido";///Do arquivo ;
+    string novoNome="Onibus",novoNomeDici=novoNome+".dicionario";///Do arquivo ;
     string data,codAux,buffer,nvLinha ;///Dados de cada linha dos binares
     //int j,OverFlou,oucupado;
     ///Classes mais complexas :
@@ -43,9 +69,10 @@ void Compressor::comprimir(string path)
     HashMap HashFreq ;
     HuffmanTree Groot ;
     HashSimb *Dicionario ;
+    novoNome+=".comprimido";
     ifstream Original(path.c_str(),ios_base::binary);///Abre o arquivo que se pretende Comprimir
     ofstream NovoArquivo(novoNome.c_str() ,ios_base::binary|ios_base::trunc);///Cria o arquivo Resultado da Compressão
-
+    ofstream NovoArquivoDicio(novoNomeDici.c_str() ,ios_base::binary|ios_base::trunc);
 
 
     while(getline(Original,data) )///Monta o Hash de Frequencias
@@ -57,7 +84,8 @@ void Compressor::comprimir(string path)
     }
     HashFreq.ordena();///O adicionar esta com defeito
     cout<<"Pre add"<<endl;
-    Groot.add(HashFreq);///Monta a arvore a partir do Hash Organizado
+    Groot.addT(HashFreq);///Monta a arvore a partir do Hash Organizado
+    cout<<"A altura e de "<<Groot.altura();
     cout<<"Pre dicionario "<<endl;
 
     Dicionario=Groot.TabSimb();///Extrai uma tabela de simbolos

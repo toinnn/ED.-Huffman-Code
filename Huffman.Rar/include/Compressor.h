@@ -16,6 +16,7 @@ class Compressor
         Compressor();
         virtual ~Compressor();
         void comprimir(string path);
+        int comprimir(int k);
         //ofn.
 
 
