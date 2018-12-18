@@ -116,7 +116,7 @@ int main()
     Compressor WinRar ;
 
     //WinRar.comprimir("C:\\Users\\limaa\\OneDrive\\Imagens\\red-eyes-black-charizard-59b472f0d1afc-estampa-301-680x969.jpg");
-    string path ;
+    string path,novoNome ;
     char r ;
     bool tk=1;
 
@@ -129,7 +129,9 @@ int main()
             cout<<"\nDigite o path completo com o nome do arquivo que deseja comprimir "<<endl;
             cout<<"\nPor exemplo : C:\\Users\\limaa\\OneDrive\\Imagens\\red-eyes-black-charizard-59b472f0d1afc-estampa-301-680x969.jpg "<<endl;
             cin>>path;
-            WinRar.comprimir(path);
+            cout<<"\nDigite um nome para o arquivo compactado"<<endl;
+            cin>>novoNome;
+            WinRar.comprimir(path,novoNome);
 
 
         }else if (r=='s'||r=='S')
@@ -141,6 +143,7 @@ int main()
             cout<<"\nPor exemplo : C:\\Users\\limaa\\OneDrive\\Imagens\\red-eyes-black-charizard-59b472f0d1afc-estampa-301-680x969.jpg "<<endl;
             cin>>path;
             cout<<"\nDigite o path completo com o nome do arquivo dicionario .dicionario  para iniciar a descompressao"<<endl;
+            //WinRar.descomprimir(path);
         }
     }
 

@@ -58,10 +58,10 @@ int Compressor::comprimir(int k)
     return 0;
 }
 
-void Compressor::comprimir(string path)
+void Compressor::comprimir(string path,string novoNome)
 {
     ///Classes mais básicas :
-    string novoNome="Onibus",novoNomeDici=novoNome+".dicionario";///Do arquivo ;
+    string novoNomeDici=novoNome+".dicionario";///Do arquivo ;
     string data,codAux,buffer,nvLinha ;///Dados de cada linha dos binares
     //int j,OverFlou,oucupado;
     ///Classes mais complexas :
@@ -124,8 +124,91 @@ void Compressor::comprimir(string path)
         cout<<"Passou do passador"<<endl;
         delete &Byte ;
     }
+    ///Criação do arquivo dicionario :
+
+    HashSimb *auxSimb=Dicionario ;
+    string auxCodigo ;
+    char auxByte ;
+    while(auxSimb->prox!=NULL)
+    {
+        auxByte=auxSimb->Byte;
+        auxCodigo=auxByte;
+        auxCodigo+=" ";
+        auxCodigo+=auxSimb->cod;
+        NovoArquivoDicio<<auxCodigo<<endl;
+        auxSimb=auxSimb->prox;
+    }
+    auxByte=auxSimb->Byte;
+    auxCodigo=auxByte;
+    auxCodigo+=" ";
+    auxCodigo+=auxSimb->cod;
+    NovoArquivoDicio<<auxCodigo<<endl;
+
+
 
 }
 
+void Compressor::descomprimir(string pathDici,string pathCompac)
+{
+    ifstream dicionario(pathDici.c_str(),ios_base::binary);
+    ifstream ArqCompac(pathCompac.c_str(),ios_base::binary);
+    ofstream Original ("RenomeieEsteArquivo",ios_base::binary|ios_base::trunc);
+    string Codigo ,data,nwLinha ;
+    char Byte ;
+    HashSimb *TabelaVerdade=NULL,*auxVerdade=TabelaVerdade ;
+   ///Criação do HashSimb/Dicionario
+    while(getline(dicionario,data))
+    {
+            Byte=data.at(0);
+            Codigo=Fatia(data,2,data.size()-1);
+            if(TabelaVerdade==NULL)
+            {
+                TabelaVerdade=(HashSimb*)malloc(sizeof(HashSimb));
+                TabelaVerdade->ant=NULL;
+                TabelaVerdade->prox=NULL;
+                TabelaVerdade->Byte=Byte;
+                TabelaVerdade->cod=Codigo;
+            }else
+            {
+                auxVerdade->prox=(HashSimb*)malloc(sizeof(HashSimb));
+                auxVerdade->prox->ant=auxVerdade;
+                auxVerdade=auxVerdade->prox;
+                auxVerdade->Byte=Byte;
+                auxVerdade->cod=Codigo;
+            }
+    }
+    ///Descompactação
+    Codigo="";
+    auxVerdade=TabelaVerdade;
+    while(getline(ArqCompac,data))
+    {
+        for(int i=0;i<data.size();i++)
+        {   bitset <16>Charat(data.at(i));
+            for(int j=0 ;j<8;j++)
+            {
+                if(Charat[j]==1)
+                {
+                    Codigo+="1";
+                }else
+                {
+                    Codigo+="0";
+                }
+                while(auxVerdade!=NULL)
+                {
+                    if(Codigo==auxVerdade->cod)
+                    {
+                        nwLinha+=auxVerdade->Byte;
+                        Codigo.clear();
+                    }
+                }
+                auxVerdade=TabelaVerdade;
 
+            }
+            delete &Charat ;
+        }
+        Original<<nwLinha<<endl;
+    }
+
+
+}
 
