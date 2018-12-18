@@ -207,6 +207,7 @@ void HashMap::escrever()
 
 void HashMap::addAux(HashMap Lista)///AUX PARA CONSTRUÇÃO DE UMA ARVORE BINARIA,Adicionar Lista ja ordenada
 {   ///Ps: Não está otimizado para receber possíveis entradas nulas
+    cout<<"Entro aki "<<endl;
     limpa();
     int nHash=sizeof(Hash);
     raiz=(Hash*)malloc(nHash);
@@ -215,7 +216,7 @@ void HashMap::addAux(HashMap Lista)///AUX PARA CONSTRUÇÃO DE UMA ARVORE BINARIA,
 
     Hash *novo,*aux=raiz,*auxL=Lista.getRaiz();
 
-    for(int i=0;i<Lista.size()-1;i++)
+    for(int i=0;i<Lista.size()-1;i++)///Menos 1 porquê o primeiro já foi alocado na raiz
     {
         aux->prox=(Hash*)malloc(nHash);
         aux->prox->ant=auxL->prox;
@@ -227,7 +228,7 @@ void HashMap::addAux(HashMap Lista)///AUX PARA CONSTRUÇÃO DE UMA ARVORE BINARIA,
 
 }
 
-Hash HashMap::auxAct(Hash *novo)///AINDA EM CONSTRUÇÃO...
+void HashMap::auxAct(Hash *novo)///AINDA EM CONSTRUÇÃO...
 {
     Hash *B=raiz->prox,*aux=raiz,retorno;
     bool tk=1;
@@ -256,9 +257,8 @@ Hash HashMap::auxAct(Hash *novo)///AINDA EM CONSTRUÇÃO...
     retorno.prox=aux->prox->prox;
 
     raiz=B->prox;
-    ///free(B); NAO SEI AINDA OQ FAZER..
+    free(B);/// NAO SEI AINDA OQ FAZER..
 
-    return retorno;
 }
 
 

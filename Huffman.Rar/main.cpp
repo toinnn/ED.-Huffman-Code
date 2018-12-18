@@ -4,6 +4,7 @@
 #include <string>
 #include "Compressor.h"
 
+
 using namespace std;
 
 
@@ -28,7 +29,8 @@ void abre (string path )
 int main()
 {
     ///OBS : NÃO REMOVER O ARQUIVO SALVO DA FICHEIRA DO EXECUTÁVEL , O PATH USADO E DO TIPO RELATIVO
-    /*string dataN,StrAux,test1,tes2;
+    /*
+    string dataN,StrAux,test1,tes2;
     HashMap HashInicial ;
 
     fstream dado("Marunae.data",ios_base::in|ios_base::out|ios_base::binary|ios_base::trunc);
@@ -108,11 +110,47 @@ int main()
     ///^FECHAMENTO DE ARQUIVOS...^
     cout << "Hello world!" << endl;
 
-    */
 
+
+    /**/
     Compressor WinRar ;
 
-    WinRar.comprimir("C:\\Users\\limaa\\OneDrive\\Imagens\\red-eyes-black-charizard-59b472f0d1afc-estampa-301-680x969.jpg");
+    //WinRar.comprimir("C:\\Users\\limaa\\OneDrive\\Imagens\\red-eyes-black-charizard-59b472f0d1afc-estampa-301-680x969.jpg");
+    string path,novoNome ;
+    char r ;
+    bool tk=1;
+
+    while(tk)
+    {
+        cout<<"\nDigite :\n c-Para comprimir\n d-Para decompactar um arquivo.comprimido\n s-Para sair"<<endl;
+        cin>>r;
+        if(r=='c'||r=='C')
+        {
+            cout<<"\nDigite o path completo com o nome do arquivo que deseja comprimir "<<endl;
+            cout<<"\nPor exemplo : C:\\Users\\limaa\\OneDrive\\Imagens\\red-eyes-black-charizard-59b472f0d1afc-estampa-301-680x969.jpg "<<endl;
+            cin>>path;
+            cout<<"\nDigite um nome para o arquivo compactado"<<endl;
+            cin>>novoNome;
+            WinRar.comprimir(path,novoNome);
+
+
+        }else if (r=='s'||r=='S')
+        {
+            tk=0;
+        }else if(r=='d'||r=='D')
+        {
+            cout<<"\nDigite o path completo com o nome do arquivo que deseja decompactar "<<endl;
+            cout<<"\nPor exemplo : C:\\Users\\limaa\\OneDrive\\Imagens\\red-eyes-black-charizard-59b472f0d1afc-estampa-301-680x969.jpg "<<endl;
+            cin>>path;
+            cout<<"\nDigite o path completo com o nome do arquivo dicionario .dicionario  para iniciar a descompressao"<<endl;
+            //WinRar.descomprimir(path);
+        }
+    }
+
+    //WinRar.comprimir(0);
+
     cout<<"Chego aki"<<endl;
+
+
     return 0;
 }

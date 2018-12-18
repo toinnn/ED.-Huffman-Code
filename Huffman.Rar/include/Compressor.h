@@ -15,7 +15,9 @@ class Compressor
     public:
         Compressor();
         virtual ~Compressor();
-        void comprimir(string path);
+        void comprimir(string path,string novoNome);
+        int comprimir(int k);
+        void descomprimir(string path,string novoNome );
         //ofn.
 
 

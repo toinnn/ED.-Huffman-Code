@@ -5,7 +5,7 @@ using namespace std ;
 
 struct Hash
 {
-    char Byte;///Fake Byte que não necessariamente tem 8 bits ;
+    char Byte;//Fake Byte que não necessariamente tem 8 bits ;
     int freq;
     Hash *prox,*ant;
 };
@@ -17,7 +17,7 @@ struct HashSimb
 {
     char Byte ;
     string cod;
-    HashSimb *ant,*prox;
+    HashSimb *prox,*ant;
 };
 
 
